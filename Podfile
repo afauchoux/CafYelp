@@ -9,6 +9,7 @@ target 'CafYelp' do
 
 pod 'Firebase/Core'
 pod 'FirebaseDatabase'
+pod 'Firebase/Storage'
 
 
 end

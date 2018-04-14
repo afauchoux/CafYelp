@@ -154,14 +154,14 @@
                         <outlet property="averageRatingLabel" destination="JJM-cm-W2g" id="6rW-fj-leB"/>
                         <outlet property="nameLabel" destination="AnL-6h-ICh" id="H0Z-bc-Z74"/>
                         <outlet property="numberOfReviewsLabel" destination="vHu-NO-ejN" id="XBI-Fh-b2z"/>
+                        <segue destination="SNG-Tg-GgV" kind="show" identifier="toAddReviewVC" id="VW2-fY-ukc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5J-4S-sMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1103" y="170"/>
         </scene>
-        
-        <!--Add ReviewVC-->
+        <!--How was your meal?-->
         <scene sceneID="1AS-vI-U1G">
             <objects>
                 <viewController id="gEm-4n-W9O" customClass="AddReviewVC" customModule="CafYelp" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,10 +170,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="qIk-7R-HTZ">
-                                <rect key="frame" x="16" y="50" width="343" height="601"/>
+                                <rect key="frame" x="16" y="94" width="343" height="557"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title of Review" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQ1-2e-zzt">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="I7F-ks-slR">
+                                        <rect key="frame" x="86" y="0.0" width="171.5" height="171.5"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="I7F-ks-slR" secondAttribute="height" multiplier="1:1" id="uvI-3j-GfO"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="JrE-C6-Hoo" appends="YES" id="oFP-9U-jaA"/>
+                                        </connections>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Review title..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQ1-2e-zzt">
+                                        <rect key="frame" x="0.0" y="178.5" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0VO-SN-NeP"/>
                                         </constraints>
@@ -181,23 +191,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-33-B90">
-                                        <rect key="frame" x="0.0" y="47" width="343" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Rating:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-33-B90">
+                                        <rect key="frame" x="0.0" y="225.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VCd-Se-bfx">
-                                        <rect key="frame" x="23" y="74.5" width="297" height="31"/>
+                                        <rect key="frame" x="23" y="253" width="297" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="QHC-e4-UxW"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="ratingSliderChanged:" destination="gEm-4n-W9O" eventType="valueChanged" id="nnt-ou-30d"/>
+                                            <action selector="sliderChanged:" destination="gEm-4n-W9O" eventType="valueChanged" id="VS7-za-uAA"/>
                                         </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C9E-sv-EJe">
-                                        <rect key="frame" x="0.0" y="111.5" width="343" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="290" width="343" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuL-zl-wdb">
                                                 <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
@@ -232,15 +242,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your review here:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-Kh-2EC">
-                                        <rect key="frame" x="0.0" y="139" width="343" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="317.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7S8-jV-DUY">
-                                        <rect key="frame" x="0.0" y="166.5" width="343" height="434.5"/>
+                                        <rect key="frame" x="0.0" y="345" width="343" height="212"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -251,6 +260,7 @@
                                     <constraint firstAttribute="trailing" secondItem="VCd-Se-bfx" secondAttribute="trailing" constant="25" id="5y1-O7-QId"/>
                                     <constraint firstAttribute="trailing" secondItem="C9E-sv-EJe" secondAttribute="trailing" id="6iJ-LZ-zBE"/>
                                     <constraint firstItem="Jdr-33-B90" firstAttribute="leading" secondItem="qIk-7R-HTZ" secondAttribute="leading" id="BCY-oI-lXX"/>
+                                    <constraint firstItem="I7F-ks-slR" firstAttribute="width" secondItem="qIk-7R-HTZ" secondAttribute="width" multiplier="0.5" id="EmF-OK-CPY"/>
                                     <constraint firstAttribute="trailing" secondItem="7S8-jV-DUY" secondAttribute="trailing" id="IZj-Yf-nXy"/>
                                     <constraint firstItem="SPW-Kh-2EC" firstAttribute="leading" secondItem="qIk-7R-HTZ" secondAttribute="leading" id="NwL-VR-oMM"/>
                                     <constraint firstItem="C9E-sv-EJe" firstAttribute="leading" secondItem="qIk-7R-HTZ" secondAttribute="leading" id="Wwi-yf-eLf"/>
@@ -270,12 +280,35 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jeU-6a-23B"/>
                     </view>
+                    <navigationItem key="navigationItem" title="How was your meal?" id="HJh-g2-Mp4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5qc-oB-Ov9">
+                            <color key="tintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="cancelTapped:" destination="gEm-4n-W9O" id="ufY-rP-bgZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="l7m-eT-Wc5">
+                            <connections>
+                                <action selector="saveTapped:" destination="gEm-4n-W9O" id="Omd-Ed-fEg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="7S8-jV-DUY" id="wiq-fG-Xky"/>
+                        <outlet property="imageView" destination="I7F-ks-slR" id="gOC-Ve-ZPv"/>
+                        <outlet property="ratingSlider" destination="VCd-Se-bfx" id="59K-d6-03a"/>
+                        <outlet property="titleTextField" destination="DQ1-2e-zzt" id="sbh-HQ-leJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtE-Jb-hMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JrE-C6-Hoo">
+                    <connections>
+                        <action selector="imageViewTapped:" destination="gEm-4n-W9O" id="GzF-zR-cJe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2229.5999999999999" y="183.95802098950526"/>
+            <point key="canvasLocation" x="3256.8000000000002" y="180.35982008995504"/>
         </scene>
-
         <!--Navigation Controller-->
         <scene sceneID="fh3-Le-ntg">
             <objects>
@@ -323,5 +356,26 @@
             </objects>
             <point key="canvasLocation" x="295" y="170"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U1z-lU-WgF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SNG-Tg-GgV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lVv-D6-3Cz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gEm-4n-W9O" kind="relationship" relationship="rootViewController" id="tJB-pH-Rb3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9G-RL-1yO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317.5999999999999" y="180.35982008995504"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="add-image" width="512" height="512"/>
+    </resources>
 </document>

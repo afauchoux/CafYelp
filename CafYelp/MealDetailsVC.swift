@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
 
 class MealDetailsVC: UIViewController {
     
@@ -23,6 +24,7 @@ class MealDetailsVC: UIViewController {
     // Properties
     var selectedMeal: String!
     var selectedLine: Line!
+    var selectedMealID: String!
     
     
     
@@ -31,25 +33,51 @@ class MealDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var currMealID: String?
+        // Create the add button and add it to the UI.
+        
+        let addReviewButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(handleAddButtonTapped))
+        
+        self.navigationItem.setRightBarButton(addReviewButton, animated: true)
+        
+        
+        
+        
+        
+        // Grab meal data from the database and display it.
         
         switch self.selectedMeal.lowercased() {
         case "breakfast":
-            currMealID = selectedLine.breakfastMealID
+            self.selectedMealID = selectedLine.breakfastMealID
         case "lunch":
-            currMealID = selectedLine.lunchMealID
+            self.selectedMealID = selectedLine.lunchMealID
         case "dinner":
-            currMealID = selectedLine.dinnerMealID
+            self.selectedMealID = selectedLine.dinnerMealID
         default:
             fatalError("Couldn't get the selected meal")
         }
         
-        
-        Database.database().reference().child("meals").child(currMealID!).observe(.value) { (snapshot) in
+        Database.database().reference().child("meals").child(self.selectedMealID!).observe(.value) { (snapshot) in
             if let mealData = snapshot.value as? [String : Any], let mealName = mealData["name"] as? String, let mealAvgRating = mealData["averageRating"] as? Double, let mealNumRatings = mealData["numberOfRatings"] as? Int {
                 
+                if let imageURL = mealData["imageURL"] as? String {
+                    print("Got image URL")
+                    Storage.storage().reference(forURL: imageURL).getData(maxSize: 2 * 1024 * 1024, completion: { (imageData, error) in
+                        if error != nil {
+                            print("Couldn't get the image from storage: \(error!.localizedDescription)")
+                        } else {
+                            // Successful download...
+                            if let downloadedImage = UIImage(data: imageData!) {
+                                self.FoodImage.image = downloadedImage
+                            }
+                        }
+                    })
+                }
+                
+                
+                
                 self.nameLabel.text = mealName
-                self.averageRatingLabel.text = "Average: \(mealAvgRating)/5 stars"
+                let mealAvgRounded = Double(Int(mealAvgRating * 100)) / 100
+                self.averageRatingLabel.text = "Average: \(mealAvgRounded)/5 stars"
                 self.numberOfReviewsLabel.text = "[\(mealNumRatings) reviews]"
             }
         }
@@ -69,6 +97,26 @@ class MealDetailsVC: UIViewController {
         
         
         
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    @objc func handleAddButtonTapped() {
+        performSegue(withIdentifier: "toAddReviewVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddReviewVC", let addReviewVC = (segue.destination as? UINavigationController)?.topViewController as? AddReviewVC {
+            addReviewVC.mealToReviewID = self.selectedMealID
+        }
     }
     
     
