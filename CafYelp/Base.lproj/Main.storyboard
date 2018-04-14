@@ -12,69 +12,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pick a meal-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="MealSelectVC" customModule="CafYelp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="yHx-Jx-ea2">
-                                <rect key="frame" x="16" y="80" width="343" height="571"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-Jc-nEX">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="177.5"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Breakfast"/>
-                                        <connections>
-                                            <action selector="mealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqI-AC-Gbb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aX-GJ-Pvz">
-                                        <rect key="frame" x="0.0" y="196.5" width="343" height="178"/>
-                                        <state key="normal" title="Lunch"/>
-                                        <connections>
-                                            <action selector="mealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntp-xR-GYs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-je-FOp">
-                                        <rect key="frame" x="0.0" y="393.5" width="343" height="177.5"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Dinner"/>
-                                        <connections>
-                                            <action selector="mealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEC-s9-dMc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="5aX-GJ-Pvz" secondAttribute="trailing" id="EkJ-et-bEM"/>
-                                    <constraint firstItem="SFP-Jc-nEX" firstAttribute="leading" secondItem="yHx-Jx-ea2" secondAttribute="leading" id="G9m-Le-BjX"/>
-                                    <constraint firstItem="5aX-GJ-Pvz" firstAttribute="leading" secondItem="yHx-Jx-ea2" secondAttribute="leading" id="GcT-ht-8vD"/>
-                                    <constraint firstAttribute="trailing" secondItem="7ho-je-FOp" secondAttribute="trailing" id="Lck-QS-95g"/>
-                                    <constraint firstAttribute="trailing" secondItem="SFP-Jc-nEX" secondAttribute="trailing" id="Sng-vX-wuz"/>
-                                    <constraint firstItem="7ho-je-FOp" firstAttribute="leading" secondItem="yHx-Jx-ea2" secondAttribute="leading" id="moO-pH-FYD"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHx-Jx-ea2" secondAttribute="trailing" constant="16" id="PK5-GY-Avp"/>
-                            <constraint firstItem="yHx-Jx-ea2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YVB-Gb-J9T"/>
-                            <constraint firstItem="yHx-Jx-ea2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="e1P-kk-16u"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yHx-Jx-ea2" secondAttribute="bottom" constant="16" id="fHF-8W-Tj8"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Pick a meal" id="kMt-gB-V6A"/>
-                    <connections>
-                        <segue destination="XJ1-zE-gY1" kind="show" identifier="toLineSelectTVC" id="wui-X6-TXO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-449" y="170"/>
-        </scene>
         <!--How was your food?-->
         <scene sceneID="g49-46-AFE">
             <objects>
@@ -160,7 +97,6 @@
             </objects>
             <point key="canvasLocation" x="1103" y="170"/>
         </scene>
-        
         <!--Add ReviewVC-->
         <scene sceneID="1AS-vI-U1G">
             <objects>
@@ -273,9 +209,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtE-Jb-hMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229.5999999999999" y="183.95802098950526"/>
+            <point key="canvasLocation" x="1772" y="170"/>
         </scene>
-
         <!--Navigation Controller-->
         <scene sceneID="fh3-Le-ntg">
             <objects>
@@ -290,7 +225,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eb4-Gm-Dqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1263" y="170"/>
+            <point key="canvasLocation" x="-1014" y="170"/>
         </scene>
         <!--Which line?-->
         <scene sceneID="5ii-ad-Tvb">
@@ -321,7 +256,159 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ph9-Z3-Q5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="295" y="170"/>
+            <point key="canvasLocation" x="428" y="170"/>
+        </scene>
+        <!--Pick a meal-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MealSelectVC" customModule="CafYelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="yHx-Jx-ea2">
+                                <rect key="frame" x="16" y="80" width="343" height="571"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-Jc-nEX">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="177.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Breakfast" backgroundImage="Breakfast">
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqI-AC-Gbb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aX-GJ-Pvz">
+                                        <rect key="frame" x="0.0" y="196.5" width="343" height="178"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Lunch" backgroundImage="Lunch">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntp-xR-GYs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-je-FOp">
+                                        <rect key="frame" x="0.0" y="393.5" width="343" height="177.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Dinner" backgroundImage="Dinner">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEC-s9-dMc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5aX-GJ-Pvz" secondAttribute="trailing" id="EkJ-et-bEM"/>
+                                    <constraint firstItem="SFP-Jc-nEX" firstAttribute="leading" secondItem="yHx-Jx-ea2" secondAttribute="leading" id="G9m-Le-BjX"/>
+                                    <constraint firstItem="5aX-GJ-Pvz" firstAttribute="leading" secondItem="yHx-Jx-ea2" secondAttribute="leading" id="GcT-ht-8vD"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ho-je-FOp" secondAttribute="trailing" id="Lck-QS-95g"/>
+                                    <constraint firstAttribute="trailing" secondItem="SFP-Jc-nEX" secondAttribute="trailing" id="Sng-vX-wuz"/>
+                                    <constraint firstItem="7ho-je-FOp" firstAttribute="leading" secondItem="yHx-Jx-ea2" secondAttribute="leading" id="moO-pH-FYD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHx-Jx-ea2" secondAttribute="trailing" constant="16" id="PK5-GY-Avp"/>
+                            <constraint firstItem="yHx-Jx-ea2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YVB-Gb-J9T"/>
+                            <constraint firstItem="yHx-Jx-ea2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="e1P-kk-16u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yHx-Jx-ea2" secondAttribute="bottom" constant="16" id="fHF-8W-Tj8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pick a meal" id="kMt-gB-V6A"/>
+                    <connections>
+                        <segue destination="XJ1-zE-gY1" kind="show" identifier="toLineSelectTVC" id="wui-X6-TXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="170"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ASc-u5-hOC">
+            <objects>
+                <viewController id="3vK-hj-dKQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XSY-1q-6Qf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gtR-MB-MVP">
+                                <rect key="frame" x="16" y="50" width="343" height="587"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Mf-AO-0Th">
+                                        <rect key="frame" x="86" y="0.0" width="171" height="171"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5Mf-AO-0Th" secondAttribute="height" multiplier="1:1" id="1Tg-a2-Ocq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food was great" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-VO-T7e">
+                                        <rect key="frame" x="113" y="183" width="117.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70O-xx-xvC">
+                                        <rect key="frame" x="0.0" y="215.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EH-sa-9xQ">
+                                        <rect key="frame" x="0.0" y="248" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-t6-tL4">
+                                        <rect key="frame" x="0.0" y="280.5" width="343" height="306.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5Mf-AO-0Th" firstAttribute="width" secondItem="gtR-MB-MVP" secondAttribute="width" multiplier="0.5" id="2L5-pw-vT3"/>
+                                    <constraint firstAttribute="trailing" secondItem="1EH-sa-9xQ" secondAttribute="trailing" id="CZz-Gk-mWJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="mJd-t6-tL4" secondAttribute="trailing" id="DN0-OL-Fdd"/>
+                                    <constraint firstItem="mJd-t6-tL4" firstAttribute="leading" secondItem="gtR-MB-MVP" secondAttribute="leading" id="Jzx-Rw-tt1"/>
+                                    <constraint firstItem="70O-xx-xvC" firstAttribute="leading" secondItem="gtR-MB-MVP" secondAttribute="leading" id="Kh2-oE-Be1"/>
+                                    <constraint firstItem="1EH-sa-9xQ" firstAttribute="leading" secondItem="gtR-MB-MVP" secondAttribute="leading" id="Pyu-nk-7c1"/>
+                                    <constraint firstItem="ZTl-VO-T7e" firstAttribute="leading" secondItem="gtR-MB-MVP" secondAttribute="leading" constant="16" id="eA8-N7-Ua6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZTl-VO-T7e" secondAttribute="trailing" constant="16" id="lm5-ic-lNt"/>
+                                    <constraint firstAttribute="trailing" secondItem="70O-xx-xvC" secondAttribute="trailing" id="zB0-Pv-NdX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Xl-Kl-YSc" firstAttribute="trailing" secondItem="gtR-MB-MVP" secondAttribute="trailing" constant="16" id="9Tl-7Z-7Va"/>
+                            <constraint firstItem="gtR-MB-MVP" firstAttribute="top" secondItem="1Xl-Kl-YSc" secondAttribute="top" constant="30" id="Vmr-05-EUv"/>
+                            <constraint firstItem="1Xl-Kl-YSc" firstAttribute="bottom" secondItem="gtR-MB-MVP" secondAttribute="bottom" constant="30" id="lkN-Ll-ImH"/>
+                            <constraint firstItem="gtR-MB-MVP" firstAttribute="leading" secondItem="XSY-1q-6Qf" secondAttribute="leading" constant="16" id="sAO-u9-b1c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Xl-Kl-YSc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaJ-NX-tlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442" y="170"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Breakfast" width="300" height="168"/>
+        <image name="Dinner" width="361" height="140"/>
+        <image name="Lunch" width="300" height="168"/>
+    </resources>
 </document>
