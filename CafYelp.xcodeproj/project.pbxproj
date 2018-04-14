@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11E1A4C97119502142CE35DC /* Pods_CafYelp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F005ABEAB866368413EF594 /* Pods_CafYelp.framework */; };
+		AF40002D2082933700114904 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40002C2082933700114904 /* Reviews.swift */; };
 		AFC0FC8E2082628C0026F31F /* MealDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC0FC8D2082628C0026F31F /* MealDetailsVC.swift */; };
 		C822DB3F20823AD400A1A008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB3E20823AD400A1A008 /* AppDelegate.swift */; };
 		C822DB4120823AD400A1A008 /* MealSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB4020823AD400A1A008 /* MealSelectVC.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		5E654C1A1526AD40DAA44C62 /* Pods-CafYelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafYelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp.debug.xcconfig"; sourceTree = "<group>"; };
 		6F005ABEAB866368413EF594 /* Pods_CafYelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafYelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF40002C2082933700114904 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		AFC0FC8D2082628C0026F31F /* MealDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsVC.swift; sourceTree = "<group>"; };
 		C822DB3B20823AD400A1A008 /* CafYelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafYelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C822DB3E20823AD400A1A008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				C822DB3E20823AD400A1A008 /* AppDelegate.swift */,
 				C822DB56208258F500A1A008 /* Line.swift */,
+				AF40002C2082933700114904 /* Reviews.swift */,
 				C822DB4020823AD400A1A008 /* MealSelectVC.swift */,
 				C822DB542082585A00A1A008 /* LineSelectTVC.swift */,
 				C822DB4220823AD400A1A008 /* Main.storyboard */,
@@ -236,6 +239,7 @@
 				AFC0FC8E2082628C0026F31F /* MealDetailsVC.swift in Sources */,
 				C822DB4120823AD400A1A008 /* MealSelectVC.swift in Sources */,
 				C822DB3F20823AD400A1A008 /* AppDelegate.swift in Sources */,
+				AF40002D2082933700114904 /* Reviews.swift in Sources */,
 				C822DB552082585A00A1A008 /* LineSelectTVC.swift in Sources */,
 				C822DB57208258F500A1A008 /* Line.swift in Sources */,
 			);
