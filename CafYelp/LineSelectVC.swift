@@ -18,10 +18,24 @@ class LineSelectVC: UIViewController {
         super.viewDidLoad()
         // This function happens when this screen first loads.
         
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddTapped))
         
+        self.navigationItem.setRightBarButtonItems([addButton], animated: true)
         
         
     }
+    
+    
+    
+    
+    
+    @objc func handleAddTapped() {
+        print("Add was tapped")
+    }
+    
+    
+    
+    
     
     
     

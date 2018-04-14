@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11E1A4C97119502142CE35DC /* Pods_CafYelp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F005ABEAB866368413EF594 /* Pods_CafYelp.framework */; };
+		AFC0FC8E2082628C0026F31F /* MealDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC0FC8D2082628C0026F31F /* MealDetailsVC.swift */; };
 		C822DB3F20823AD400A1A008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB3E20823AD400A1A008 /* AppDelegate.swift */; };
 		C822DB4120823AD400A1A008 /* MealSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB4020823AD400A1A008 /* MealSelectVC.swift */; };
 		C822DB4420823AD400A1A008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822DB4220823AD400A1A008 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		5E654C1A1526AD40DAA44C62 /* Pods-CafYelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafYelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp.debug.xcconfig"; sourceTree = "<group>"; };
 		6F005ABEAB866368413EF594 /* Pods_CafYelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafYelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC0FC8D2082628C0026F31F /* MealDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsVC.swift; sourceTree = "<group>"; };
 		C822DB3B20823AD400A1A008 /* CafYelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafYelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C822DB3E20823AD400A1A008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C822DB4020823AD400A1A008 /* MealSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSelectVC.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				C822DB4720823AD500A1A008 /* LaunchScreen.storyboard */,
 				C822DB4A20823AD600A1A008 /* Info.plist */,
 				C822DB5020823BB500A1A008 /* GoogleService-Info.plist */,
+				AFC0FC8D2082628C0026F31F /* MealDetailsVC.swift */,
 			);
 			path = CafYelp;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC0FC8E2082628C0026F31F /* MealDetailsVC.swift in Sources */,
 				C822DB532082489300A1A008 /* LineSelectVC.swift in Sources */,
 				C822DB4120823AD400A1A008 /* MealSelectVC.swift in Sources */,
 				C822DB3F20823AD400A1A008 /* AppDelegate.swift in Sources */,
