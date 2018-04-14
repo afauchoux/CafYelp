@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11E1A4C97119502142CE35DC /* Pods_CafYelp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F005ABEAB866368413EF594 /* Pods_CafYelp.framework */; };
 		C822DB3F20823AD400A1A008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB3E20823AD400A1A008 /* AppDelegate.swift */; };
 		C822DB4120823AD400A1A008 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB4020823AD400A1A008 /* ViewController.swift */; };
 		C822DB4420823AD400A1A008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822DB4220823AD400A1A008 /* Main.storyboard */; };
 		C822DB4620823AD500A1A008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C822DB4520823AD500A1A008 /* Assets.xcassets */; };
 		C822DB4920823AD500A1A008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822DB4720823AD500A1A008 /* LaunchScreen.storyboard */; };
+		C822DB5120823BB500A1A008 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C822DB5020823BB500A1A008 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E654C1A1526AD40DAA44C62 /* Pods-CafYelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafYelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp.debug.xcconfig"; sourceTree = "<group>"; };
+		6F005ABEAB866368413EF594 /* Pods_CafYelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafYelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C822DB3B20823AD400A1A008 /* CafYelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafYelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C822DB3E20823AD400A1A008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C822DB4020823AD400A1A008 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		C822DB4520823AD500A1A008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C822DB4820823AD500A1A008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C822DB4A20823AD600A1A008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C822DB5020823BB500A1A008 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0B541849A0C8379EF6B48FF /* Pods-CafYelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafYelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E1A4C97119502142CE35DC /* Pods_CafYelp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C9A122BB073F0D5F28AA3F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E654C1A1526AD40DAA44C62 /* Pods-CafYelp.debug.xcconfig */,
+				E0B541849A0C8379EF6B48FF /* Pods-CafYelp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C822DB3220823AD400A1A008 = {
 			isa = PBXGroup;
 			children = (
 				C822DB3D20823AD400A1A008 /* CafYelp */,
 				C822DB3C20823AD400A1A008 /* Products */,
+				8C9A122BB073F0D5F28AA3F1 /* Pods */,
+				EECD7814A5AD2262D4F04F1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +78,17 @@
 				C822DB4520823AD500A1A008 /* Assets.xcassets */,
 				C822DB4720823AD500A1A008 /* LaunchScreen.storyboard */,
 				C822DB4A20823AD600A1A008 /* Info.plist */,
+				C822DB5020823BB500A1A008 /* GoogleService-Info.plist */,
 			);
 			path = CafYelp;
+			sourceTree = "<group>";
+		};
+		EECD7814A5AD2262D4F04F1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F005ABEAB866368413EF594 /* Pods_CafYelp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C822DB4D20823AD600A1A008 /* Build configuration list for PBXNativeTarget "CafYelp" */;
 			buildPhases = (
+				68CF84217D655252AB0EFB66 /* [CP] Check Pods Manifest.lock */,
 				C822DB3720823AD400A1A008 /* Sources */,
 				C822DB3820823AD400A1A008 /* Frameworks */,
 				C822DB3920823AD400A1A008 /* Resources */,
+				351882D8AB88DBA88F8E5164 /* [CP] Embed Pods Frameworks */,
+				FABF30D5A0AC693295B8CA35 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,10 +155,69 @@
 				C822DB4920823AD500A1A008 /* LaunchScreen.storyboard in Resources */,
 				C822DB4620823AD500A1A008 /* Assets.xcassets in Resources */,
 				C822DB4420823AD400A1A008 /* Main.storyboard in Resources */,
+				C822DB5120823BB500A1A008 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		351882D8AB88DBA88F8E5164 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68CF84217D655252AB0EFB66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafYelp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FABF30D5A0AC693295B8CA35 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C822DB3720823AD400A1A008 /* Sources */ = {
@@ -278,15 +367,13 @@
 		};
 		C822DB4E20823AD600A1A008 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E654C1A1526AD40DAA44C62 /* Pods-CafYelp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQEL5W6SA3;
 				INFOPLIST_FILE = CafYelp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BrennanLinse.CafYelp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +383,13 @@
 		};
 		C822DB4F20823AD600A1A008 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B541849A0C8379EF6B48FF /* Pods-CafYelp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQEL5W6SA3;
 				INFOPLIST_FILE = CafYelp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BrennanLinse.CafYelp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
