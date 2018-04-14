@@ -15,7 +15,6 @@
 		C822DB4620823AD500A1A008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C822DB4520823AD500A1A008 /* Assets.xcassets */; };
 		C822DB4920823AD500A1A008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822DB4720823AD500A1A008 /* LaunchScreen.storyboard */; };
 		C822DB5120823BB500A1A008 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C822DB5020823BB500A1A008 /* GoogleService-Info.plist */; };
-		C822DB532082489300A1A008 /* LineSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB522082489300A1A008 /* LineSelectVC.swift */; };
 		C822DB552082585A00A1A008 /* LineSelectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB542082585A00A1A008 /* LineSelectTVC.swift */; };
 		C822DB57208258F500A1A008 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822DB56208258F500A1A008 /* Line.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +31,6 @@
 		C822DB4820823AD500A1A008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C822DB4A20823AD600A1A008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C822DB5020823BB500A1A008 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C822DB522082489300A1A008 /* LineSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSelectVC.swift; sourceTree = "<group>"; };
 		C822DB542082585A00A1A008 /* LineSelectTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSelectTVC.swift; sourceTree = "<group>"; };
 		C822DB56208258F500A1A008 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		E0B541849A0C8379EF6B48FF /* Pods-CafYelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafYelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafYelp/Pods-CafYelp.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				C822DB3E20823AD400A1A008 /* AppDelegate.swift */,
 				C822DB56208258F500A1A008 /* Line.swift */,
 				C822DB4020823AD400A1A008 /* MealSelectVC.swift */,
-				C822DB522082489300A1A008 /* LineSelectVC.swift */,
 				C822DB542082585A00A1A008 /* LineSelectTVC.swift */,
 				C822DB4220823AD400A1A008 /* Main.storyboard */,
 				C822DB4520823AD500A1A008 /* Assets.xcassets */,
@@ -237,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC0FC8E2082628C0026F31F /* MealDetailsVC.swift in Sources */,
-				C822DB532082489300A1A008 /* LineSelectVC.swift in Sources */,
 				C822DB4120823AD400A1A008 /* MealSelectVC.swift in Sources */,
 				C822DB3F20823AD400A1A008 /* AppDelegate.swift in Sources */,
 				C822DB552082585A00A1A008 /* LineSelectTVC.swift in Sources */,

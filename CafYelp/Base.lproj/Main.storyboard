@@ -68,7 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pick a meal" id="kMt-gB-V6A"/>
                     <connections>
-                        <segue destination="ipK-Qb-mZd" kind="show" identifier="toLineSelectVC" id="BZt-nd-kzr"/>
+                        <segue destination="XJ1-zE-gY1" kind="show" identifier="toLineSelectTVC" id="wui-X6-TXO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -151,11 +151,14 @@
                         <outlet property="FoodImage" destination="L4b-QA-LzI" id="WuG-5v-S3y"/>
                         <outlet property="LabelStack" destination="SXM-us-XvI" id="19g-C6-6g0"/>
                         <outlet property="TableReviews" destination="esn-Sk-4f9" id="O2Z-Kf-IcU"/>
+                        <outlet property="averageRatingLabel" destination="JJM-cm-W2g" id="6rW-fj-leB"/>
+                        <outlet property="nameLabel" destination="AnL-6h-ICh" id="H0Z-bc-Z74"/>
+                        <outlet property="numberOfReviewsLabel" destination="vHu-NO-ejN" id="XBI-Fh-b2z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5J-4S-sMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414.3884892086332" y="183.99280575539569"/>
+            <point key="canvasLocation" x="1103" y="170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fh3-Le-ntg">
@@ -173,28 +176,10 @@
             </objects>
             <point key="canvasLocation" x="-1263" y="170"/>
         </scene>
-        <!--Line SelectVC-->
-        <scene sceneID="mSP-Gp-CAP">
-            <objects>
-                <viewController id="ipK-Qb-mZd" customClass="LineSelectVC" customModule="CafYelp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vCy-WY-dWU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="uK2-zh-Iba"/>
-                    </view>
-                    <connections>
-                        <segue destination="9Pi-zm-D4z" kind="show" id="vgN-hK-IK0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kGA-Z0-rAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="405.60000000000002" y="169.56521739130437"/>
-        </scene>
-        <!--Table View Controller-->
+        <!--Which line?-->
         <scene sceneID="5ii-ad-Tvb">
             <objects>
-                <tableViewController id="XJ1-zE-gY1" sceneMemberID="viewController">
+                <tableViewController title="Which line?" id="XJ1-zE-gY1" customClass="LineSelectTVC" customModule="CafYelp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zVV-4s-Qbm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,10 +199,13 @@
                             <outlet property="delegate" destination="XJ1-zE-gY1" id="ZUS-ia-drB"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="9Pi-zm-D4z" kind="show" identifier="toMealDetailsVC" id="f8J-q9-bkE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ph9-Z3-Q5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="847"/>
+            <point key="canvasLocation" x="295" y="170"/>
         </scene>
     </scenes>
 </document>

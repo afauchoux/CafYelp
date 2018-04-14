@@ -10,6 +10,12 @@ import UIKit
 
 class MealSelectVC: UIViewController {
 
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -17,19 +23,19 @@ class MealSelectVC: UIViewController {
     
     
     @IBAction func mealButtonTapped(_ sender: UIButton) {
-        let mealSelected = sender.titleLabel!.text
-        performSegue(withIdentifier: "toLineSelectVC", sender: mealSelected)
+        let mealSelected = sender.titleLabel!.text!
+        performSegue(withIdentifier: "toLineSelectTVC", sender: mealSelected)
     }
     
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toLineSelectVC"
-        {
-            if let nextScreen = segue.destination as? LineSelectVC
-            {
-                // Set something on the next screen
+        if segue.identifier == "toLineSelectTVC", let lineSelectScreen = segue.destination as? LineSelectTVC {
+            if let selectedMeal = sender as? String {
+                lineSelectScreen.navigationItem.title = "Today's \(selectedMeal.capitalized) Options"
+                lineSelectScreen.selectedMeal = selectedMeal
             }
+            
         }
     }
     

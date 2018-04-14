@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MealDetailsVC: UIViewController {
-
     
+    // Outlets
     @IBOutlet weak var FoodImage: UIImageView!
     @IBOutlet weak var LabelStack: UIStackView!
     @IBOutlet weak var TableReviews: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var averageRatingLabel: UILabel!
+    @IBOutlet weak var numberOfReviewsLabel: UILabel!
     
+    
+    // Properties
+    var selectedMeal: String!
+    var selectedLine: Line!
     
     
     
@@ -22,26 +30,54 @@ class MealDetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        var currMealID: String?
+        
+        switch self.selectedMeal.lowercased() {
+        case "breakfast":
+            currMealID = selectedLine.breakfastMealID
+        case "lunch":
+            currMealID = selectedLine.lunchMealID
+        case "dinner":
+            currMealID = selectedLine.dinnerMealID
+        default:
+            fatalError("Couldn't get the selected meal")
+        }
+        
+        
+        Database.database().reference().child("meals").child(currMealID!).observe(.value) { (snapshot) in
+            if let mealData = snapshot.value as? [String : Any], let mealName = mealData["name"] as? String, let mealAvgRating = mealData["averageRating"] as? Double, let mealNumRatings = mealData["numberOfRatings"] as? Int {
+                
+                self.nameLabel.text = mealName
+                self.averageRatingLabel.text = "Average: \(mealAvgRating)/5 stars"
+                self.numberOfReviewsLabel.text = "[\(mealNumRatings) reviews]"
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
+    
+    
+    
+    
 }
 
 

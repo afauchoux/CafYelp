@@ -11,5 +11,7 @@ import Foundation
 struct Line {
     var name: String
     var lineID: String
-    var currentMealID: String
+    var breakfastMealID: String
+    var lunchMealID: String
+    var dinnerMealID: String
 }
