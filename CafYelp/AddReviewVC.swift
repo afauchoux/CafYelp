@@ -110,7 +110,7 @@ class AddReviewVC: UIViewController, UINavigationControllerDelegate, UIImagePick
                 
                 newReviewData["imageURL"] = downloadURL
                 
-                updates["/mealReviews/\(self.mealToReviewID)/\(newReviewID)"] = true
+                updates["/mealReviews/\(self.mealToReviewID ?? "mealIDSteak")/\(newReviewID)"] = true
                 updates["/reviews/\(newReviewID)"] = newReviewData
                 
                 Database.database().reference().child("meals").child(self.mealToReviewID).runTransactionBlock({ (currentSnapshot) -> TransactionResult in
@@ -152,9 +152,9 @@ class AddReviewVC: UIViewController, UINavigationControllerDelegate, UIImagePick
         } else {
             // Didn't select a review image.
             print("Didn't select an image")
-            updates["/mealReviews/\(self.mealToReviewID)/\(newReviewID)"] = true
+            updates["/mealReviews/\("mealIDSteak")/\(newReviewID)"] = true
             updates["/reviews/\(newReviewID)"] = newReviewData
-            
+            print("Updates to push to the database: \(updates)")
             Database.database().reference().child("meals").child(self.mealToReviewID).runTransactionBlock({ (currentSnapshot) -> TransactionResult in
                 if var currentMealData = currentSnapshot.value as? [String : Any], let currNumRatings = currentMealData["numberOfRatings"] as? Double, let currTotalRating = currentMealData["totalRating"] as? Double {
                     print("Running the DB transaction")
@@ -170,7 +170,6 @@ class AddReviewVC: UIViewController, UINavigationControllerDelegate, UIImagePick
                     
                     currentSnapshot.value = currentMealData
                     
-                    print("here")
                     return TransactionResult.success(withValue: currentSnapshot)
                     
                 }

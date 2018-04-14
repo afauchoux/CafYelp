@@ -9,11 +9,8 @@
 import Foundation
 
 struct Review{
-    var description: String
-    var imageURL: String
+    var description: String?
     var mealID: String
-    var reviewUID: String
     var starRating: Int
-    var timeStamp: Date
-    
+    var title: String?
 }

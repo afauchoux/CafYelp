@@ -66,7 +66,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="See all reviews" id="arY-fQ-dcO"/>
+                                    <barButtonItem title="See all reviews" id="arY-fQ-dcO">
+                                        <connections>
+                                            <segue destination="jyN-jL-pnP" kind="show" identifier="toReviewsTVC" id="eiZ-Xb-RN0"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -97,6 +101,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5J-4S-sMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1103" y="170"/>
+        </scene>
+        <!--Reviews-->
+        <scene sceneID="WVl-pM-JPo">
+            <objects>
+                <tableViewController title="Reviews" id="jyN-jL-pnP" customClass="ReviewsTVC" customModule="CafYelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IYo-q5-2SV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="90" id="vVH-mU-m5a" customClass="ReviewCell" customModule="CafYelp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vVH-mU-m5a" id="PQO-HP-GWl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zpg-ej-ouT">
+                                            <rect key="frame" x="16" y="8" width="73" height="73.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Untitled]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-Rb-RHJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="73" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99 stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9G-FR-fbO">
+                                                    <rect key="frame" x="0.0" y="37" width="73" height="36.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breakfast" translatesAutoresizingMaskIntoConstraints="NO" id="Rml-2k-ndb">
+                                            <rect key="frame" x="309" y="20" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="PeU-vg-mtG"/>
+                                                <constraint firstAttribute="width" constant="50" id="y1j-Jt-3M8"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zpg-ej-ouT" firstAttribute="leading" secondItem="PQO-HP-GWl" secondAttribute="leading" constant="16" id="ICR-Z3-gXY"/>
+                                        <constraint firstItem="Rml-2k-ndb" firstAttribute="centerY" secondItem="PQO-HP-GWl" secondAttribute="centerY" id="M6V-dA-4Mt"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rml-2k-ndb" secondAttribute="trailing" constant="16" id="aph-Xi-GbN"/>
+                                        <constraint firstItem="zpg-ej-ouT" firstAttribute="top" secondItem="PQO-HP-GWl" secondAttribute="top" constant="8" id="isT-y5-ZYA"/>
+                                        <constraint firstAttribute="bottom" secondItem="zpg-ej-ouT" secondAttribute="bottom" constant="8" id="vhI-tH-EwC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ratingLabel" destination="c9G-FR-fbO" id="LWB-hM-9Ed"/>
+                                    <outlet property="thumbsImageView" destination="Rml-2k-ndb" id="d6n-dj-xfD"/>
+                                    <outlet property="titleLabel" destination="mfs-Rb-RHJ" id="WYe-cJ-xIm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jyN-jL-pnP" id="skf-Ok-9r0"/>
+                            <outlet property="delegate" destination="jyN-jL-pnP" id="rtZ-k8-K3I"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-c0-siE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1538.4000000000001" y="859.52023988005999"/>
         </scene>
         <!--How was your meal?-->
         <scene sceneID="1AS-vI-U1G">
@@ -438,7 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaJ-NX-tlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442" y="170"/>
+            <point key="canvasLocation" x="1538" y="-496"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U1z-lU-WgF">
@@ -460,6 +530,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Breakfast" width="300" height="168"/>
+        <image name="Dinner" width="361" height="140"/>
+        <image name="Lunch" width="300" height="168"/>
         <image name="add-image" width="512" height="512"/>
     </resources>
 </document>

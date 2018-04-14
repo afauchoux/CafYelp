@@ -81,28 +81,6 @@ class MealDetailsVC: UIViewController {
                 self.numberOfReviewsLabel.text = "[\(mealNumRatings) reviews]"
             }
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
     
@@ -117,6 +95,15 @@ class MealDetailsVC: UIViewController {
         if segue.identifier == "toAddReviewVC", let addReviewVC = (segue.destination as? UINavigationController)?.topViewController as? AddReviewVC {
             addReviewVC.mealToReviewID = self.selectedMealID
         }
+        
+        if segue.identifier == "toReviewsTVC", let reviewsTVC = segue.destination as? ReviewsTVC {
+            print("Going to ReviewsTVC")
+            reviewsTVC.currMealID = selectedMealID
+        }
+        
+        
+        
+        
     }
     
     
